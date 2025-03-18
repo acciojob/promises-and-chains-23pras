@@ -8,6 +8,7 @@ document.getElementById('voteForm').addEventListener('submit',(event)=>{
 
 	if(!age || !name){
 		alert("Please enter valid details");
+		return
 	}
 
 	const ageNum = Number(age);
@@ -17,7 +18,7 @@ document.getElementById('voteForm').addEventListener('submit',(event)=>{
 				res(`Welcome, .${name} You can vote.`)
 			}
 			else{
-				rej(`Oh sorry . You aren't old enough.`)
+				rej(`Oh sorry ${name}. You aren't old enough.`)
 			}
 		},4000)
 	});
